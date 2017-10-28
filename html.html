@@ -1,0 +1,251 @@
+<!--
+    ==========================================================================================
+
+    Coded by:
+    Piyush
+    {
+        "Roll"  :   "1701CS33",
+        "Email" :   "piyush.cs17@iitp.ac.in",
+        "Phone" :   {9673582517,8850774467}
+    }
+
+    ==========================================================================================
+
+    NJACK Challenge 3
+    Making a similar webpage as below
+    https://www.w3schools.com/w3css/tryw3css_templates_pizza.htm
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+  <!-- Custom  CSS -->
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="stylesheet" type="text/css" href="fonts.css">
+
+  <!-- Using pre built w3 css styles -->
+  <link rel="stylesheet" href="w3-css.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- Navbar -->
+    <!-- When the width of the window is less than 770px the navbar is hidden -->
+    <nav class="navbar navbar-inverse navbar-default small" style="z-index: 10">
+      <ul class="nav navbar-nav">
+        <!-- "greyButton" in cutom css -->
+        <li><a href="#" class="greyButton">HOME</a></li>
+        <li><a href="#menu" class="greyButton">MENU</a></li>
+        <li><a href="#about" class="greyButton">ABOUT</a></li>
+        <li><a href="#googleMap" class="greyButton">CONTACT</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="wrapper">
+      <!-- Header -->
+      <div class="row">
+        <header id="header" class="w3-display-container w3-grayscale-min">
+          <div class="w3-center w3-display-middle center-block" id="header-centercontent">
+            <span id="title">THIN CRUST PIZZA<br></span>
+            <button id="headerbutton">LET ME SEE THE MENU</a></button>
+          </div>
+          <div class="w3-display-bottomleft w3-padding">
+            <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
+          </div>
+        </header>
+      </div>
+
+
+      <!-- Menu -->
+      <div class="row" id="menu">
+        <div class="content col-xs-10 col-xs-offset-1 w3-border-dark-grey">
+          <h1 class="w3-center w3-jumbo subheading">The Menu</h1>
+          <div class="row w3-center w3-border w3-border-dark-grey">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'pizza');" id="pizzaTab">
+              <div class="col-xs-4 menu-item redMouseOver w3-red">Pizza</div>
+              <!-- This div is the active on refresh. Therefore red -->
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'salads');">
+              <div class="col-xs-4 menu-item redMouseOver">Salads</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'starters');">
+              <div class="col-xs-4 menu-item redMouseOver">Starters</div>
+            </a>
+          </div>
+
+          <div id="pizza" class="w3-container menu w3-padding-32 w3-white">
+            <h1>
+                            <b>Margherita</b>
+
+                            <!-- Span generally used for customizing specific small part of an element  -->
+                            <!-- Float right, tag, bkgd grey, rounded corners -->
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$12.50</span>
+                        </h1>
+            <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+            <hr>
+
+            <h1><b>Formaggio</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$15.50</span>
+                        </h1>
+            <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+            <hr>
+
+            <h1><b>Chicken</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$17.00</span>
+                        </h1>
+            <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+            <hr>
+
+            <h1><b>Pineapple'o'clock</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$16.50</span>
+                        </h1>
+            <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+            <hr>
+
+            <h1><b>Meat Town</b>
+                            <span class="w3-tag w3-red w3-round">Hot!</span>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$20.00</span>
+                        </h1>
+            <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+            <hr>
+
+            <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$21.50</span></h1>
+            <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+          </div>
+
+          <div id="salads" class="w3-container menu w3-padding-32 w3-white">
+            <h1><b>Lasagna</b>
+                            <span class="w3-tag w3-grey w3-round">Popular</span>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$13.50</span>
+                        </h1>
+            <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+            <hr>
+
+            <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$14.50</span></h1>
+            <p class="w3-text-grey">Ravioli filled with cheese</p>
+            <hr>
+
+            <h1><b>Spaghetti Classica</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$11.00</span>
+                        </h1>
+            <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+            <hr>
+
+            <h1><b>Seafood pasta</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$25.50</span>
+                        </h1>
+            <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+
+          </div>
+
+          <div id="starters" class="w3-container menu w3-padding-32 w3-white">
+            <h1><b>Today's Soup</b>
+                            <span class="w3-tag w3-grey w3-round">Seasonal</span>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$5.50</span>
+                        </h1>
+            <p class="w3-text-grey">Ask the waiter</p>
+            <hr>
+
+            <h1><b>Bruschetta</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$8.50</span>
+                        </h1>
+            <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+            <hr>
+
+            <h1><b>Garlic bread</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$9.50</span>
+                        </h1>
+            <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+            <hr>
+
+            <h1><b>Tomozzarella</b>
+                            <span class="w3-right w3-tag w3-dark-grey w3-round priceHolder">$10.50</span>
+                        </h1>
+            <p class="w3-text-grey">Tomatoes and mozzarella</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- About -->
+      <div id="about" class="row" style="color:white;">
+        <div class="content col-xs-10 col-xs-offset-1">
+          <div>
+            <h1 class="w3-center w3-jumbo subheading">About</h1>
+            <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="images/chef.jpg" style="width:150px;float:right" class="w3-circle right" alt="Chef"></p>
+            <p><strong>The Chef?</strong> Mr. Italiano himself
+              <p>We are proud of our interiors.</p>
+          </div>
+          <br>
+          <br>
+          <br>
+          <img src="images/onepage_restaurant.jpg" alt="" style="align-self: center;">
+          <h2 style="color:white;">Opening Hours</h2>
+          <div class="row openhr" style="color:white;">
+            <div class="col-md-6">
+              <p>Mon & Tue CLOSED</p>
+              <p>Wednesday 10.00 - 24.00</p>
+              <p>Thursday 10:00 - 24:00</p>
+            </div>
+            <div class="col-md-6">
+              <p>Friday 10:00 - 12:00</p>
+              <p>Saturday 10:00 - 23:00</p>
+              <p>Sunday Closed</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Google Maps -->
+      <div id="googleMap" class="w3-grayscale-max" style="width:100%;height:400px;"></div>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="row" id="contact">
+      <h1 class="w3-center w3-jumbo subheading">Contact</h1>
+      <div class="content col-xs-10 col-xs-offset-1">
+        <p>Find us at some address at some place or call us at 05050515-122330</p>
+        <p><span id="fyi">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.
+        </p>
+        <h2>Reserve a table, ask for today's special or just send us a message:</h2>
+        <form class="w3-center" style="color:black;">
+          <input required placeholder="Name" type="text"><br><br>
+          <input required type="number" placeholder="How many people"><br><br>
+          <input required type="datetime-local" value="2017-11-16T20:00"><br><br>
+          <input required type="text" placeholder="Message / Special Requirements"><br><br>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <!-- Footer -->
+  <div class="row">
+    <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+  </div>
+
+  <script src="jq.js" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQgysGQwxMfDvpcI6YapdoAkL0BrLUTps&callback=myMap"></script>
+</body>
+
+</html>

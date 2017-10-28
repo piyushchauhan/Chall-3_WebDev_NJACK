@@ -1,0 +1,8 @@
+@font-face {
+  font-family: myFont;
+  src: url(https://fonts.gstatic.com/s/amaticsc/v10/DPPfSFKxRTXvae2bKDzp5FtXRa8TVwTICgirnJhmVJw.woff2);
+}
+
+html {
+  font-family: myFont;
+}
