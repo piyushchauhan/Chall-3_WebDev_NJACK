@@ -3,4 +3,4 @@ Target is to make a webpage looking similar to https://www.w3schools.com/w3css/t
 
 # Special Features
 - Bootstrap: Cross platform compatibility.
-- JQuery: Browsing through the menu of the restaurant. 
+- JavaScript: Browsing through the menu of the restaurant. 
